@@ -1,7 +1,6 @@
 from PIL import Image, ImageFont, ImageDraw
 from inky import InkyPHAT
 from dotenv import load_dotenv
-from requests import post, get
 import os
 from datetime import datetime
 from io import BytesIO
@@ -13,9 +12,12 @@ load_dotenv()
 USER_NAME = os.getenv('USERNAME')
 API_KEY = os.getenv('API_KEY')
 CATEGORY_ID = os.getenv('CATEGORY_ID')
+MINIFLUX_HOST = os.getenv('MINIFLUX_HOST');
 
 ICON_GUTTER_WIDTH = 40
 SPACING = 4
+
+client = client = miniflux.Client(MINIFLUX_HOST, api_key=API_KEY)
 
 inky_display = InkyPHAT("black")
 inky_display.set_border(inky_display.WHITE)
@@ -46,46 +48,6 @@ def wrap_text(text, width, font):
 
     return text_lines
 
-
-def get_newsblur_cookies(user, password=''):
-    data = {'username': user}
-
-    if (password):
-        data.password = password
-
-    response = post(API_PREFIX + 'api/login', data=data)
-    return response.cookies
-
-
-def fetch_recent_story(cookies, feed_id):
-    response = post(API_PREFIX + '/reader/feed/' + str(feed_id),
-                    cookies=cookies, data={'include_story+content': False}).json()
-    favicons = get(API_PREFIX + 'reader/favicons?feed_ids=' +
-                   str(feed_id), cookies=cookies).json()
-    recent_story = list(response.get('stories'))[0]
-    return {
-        'date': datetime.fromtimestamp(int(recent_story.get('story_timestamp'))),
-        'headline': recent_story.get('story_title'),
-        'favicon': favicons.get(str(feed_id))
-    }
-
-
-def find_folder(folders, feed_id):
-    for folder in folders:
-        if(type(folder) is dict and list(folder.keys())[0] == feed_id):
-            return folder.get(feed_id)
-        elif(folder == feed_id):
-            return [folder]
-
-
-def get_newsblur_feed_list(cookies):
-    response = post(API_PREFIX + '/reader/feeds', cookies=cookies).json()
-    feeds = find_folder(response.get('folders'), FEED_ID)
-    if(not feeds):
-        feeds = list([FEED_ID])
-    return feeds
-
-
 def draw_text(draw, headline):
     GUTTER_WIDTH = ICON_GUTTER_WIDTH + (SPACING * 2)
     lines = wrap_text(headline, inky_display.WIDTH - GUTTER_WIDTH, font)
@@ -114,11 +76,11 @@ def draw_headline(headline, encoded_favicon):
 
 
 def main():
-    cookies = get_newsblur_cookies(USER_NAME, PASSWORD)
-    feeds = get_newsblur_feed_list(cookies)
-    stories = list(map(lambda feed: fetch_recent_story(cookies, feed), feeds))
-    most_recent = sorted(stories, key=lambda k: k['date'])[::-1][0]
-    draw_headline(most_recent.get('headline'), most_recent.get('favicon'))
+    feeds = client.get_entries(category_id=CATEGORY_ID, status=['read', 'unread'], limit=1, order='published_at', direction='desc')
+    recent_story = feeds.get('entries')[0]
+    icon_data = recent_story.get('feed').get('icon')
+    icon = client.get_feed_icon(feed_id=icon_data.get('feed_id'))
+    draw_headline(recent_story.get('title'), icon.get('data'))
     now = datetime.now()
     current_time = now.strftime("%m/%d/%Y, %H:%M:%S")
     print("Updated story!", current_time)
