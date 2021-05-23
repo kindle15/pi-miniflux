@@ -12,7 +12,7 @@ load_dotenv()
 USER_NAME = os.getenv('USERNAME')
 API_KEY = os.getenv('API_KEY')
 CATEGORY_ID = os.getenv('CATEGORY_ID')
-MINIFLUX_HOST = os.getenv('MINIFLUX_HOST');
+MINIFLUX_HOST = os.getenv('MINIFLUX_HOST')
 
 ICON_GUTTER_WIDTH = 40
 SPACING = 4
