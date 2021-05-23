@@ -60,10 +60,11 @@ def draw_text(draw, headline):
 
 
 def draw_favicon(img, encoded_favicon):
+    print(encoded_favicon)
     favicon = Image.open(BytesIO(base64.b64decode(encoded_favicon)))
-    large_fav = favicon.resize((ICON_GUTTER_WIDTH, ICON_GUTTER_WIDTH), Image.HAMMING)
+    large_fav = favicon.resize((ICON_GUTTER_WIDTH, ICON_GUTTER_WIDTH), Image.LANCZOS)
     CENTERED_IMG = (inky_display.HEIGHT / 2) - (ICON_GUTTER_WIDTH / 2)
-    img.paste(large_fav, (int(SPACING / 2), int(CENTERED_IMG)))
+    img.paste(large_fav, (int(SPACING / 2), int(CENTERED_IMG)), large_fav)
 
 
 def draw_headline(headline, encoded_favicon):
