@@ -38,6 +38,30 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
+name = "inky"
+version = "1.2.0"
+description = "Inky pHAT Driver"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = "*"
+smbus2 = "*"
+spidev = "*"
+
+[package.extras]
+example-depends = ["beautifulsoup4", "geocoder", "requests"]
+fonts = ["font-fredoka-one", "font-hanken-grotesk", "font-intuitive", "font-source-serif-pro"]
+rpi = ["rpi.gpio"]
+rpi-gpio-output = ["rpi.gpio"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
 name = "miniflux"
 version = "0.0.13"
 description = "Client library for Miniflux API"
@@ -47,6 +71,32 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 requests = "*"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
+name = "numpy"
+version = "1.20.3"
+description = "NumPy is the fundamental package for array computing with Python."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
+name = "pillow"
+version = "8.2.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
+optional = false
+python-versions = ">=3.6"
 
 [package.source]
 type = "legacy"
@@ -93,6 +143,50 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
+name = "rpi.gpio"
+version = "0.7.0"
+description = "A module to control Raspberry Pi GPIO channels"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
+name = "smbus2"
+version = "0.4.1"
+description = "smbus2 is a drop-in replacement for smbus-cffi/smbus-python in pure Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+docs = ["sphinx (>=1.5.3)"]
+qa = ["flake8"]
+test = ["nose", "mock"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
+name = "spidev"
+version = "3.5"
+description = "Python bindings for Linux SPI access through spidev"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
 name = "urllib3"
 version = "1.26.4"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -113,7 +207,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "2b684093d47d3079efa9ab71f3aca46aa716da60ba0e4232fd98adc9b2fb103f"
+content-hash = "72ed2eef1c62df18c1b7137dd8e5f5c46b0e87fbda6b27935bb58196e60e192e"
 
 [metadata.files]
 certifi = [
@@ -125,14 +219,44 @@ chardet = [
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:4a57a6379512ade94fa99e2fa46d3cd0f2f553040548d0e2958c6ed90ee48226"},
 ]
+inky = [
+    {file = "inky-1.2.0-py3-none-any.whl", hash = "sha256:71b81aa9c0efcee3b6783af17788ec506b04dd64503f5e46ac17a6d813c08136"},
+]
 miniflux = [
     {file = "miniflux-0.0.13-py2.py3-none-any.whl", hash = "sha256:283529347d7a84551eea43862a99107f291f1b251bf3bda00e65e926df90317d"},
+]
+numpy = [
+    {file = "numpy-1.20.3-cp37-cp37m-linux_armv6l.whl", hash = "sha256:d840d80623c96696fab0d15489f49425bec1c0f47f3bf0b3362ce0c75dbad993"},
+    {file = "numpy-1.20.3-cp37-cp37m-linux_armv7l.whl", hash = "sha256:d840d80623c96696fab0d15489f49425bec1c0f47f3bf0b3362ce0c75dbad993"},
+]
+pillow = [
+    {file = "Pillow-8.2.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:3da86987a323708512d4d35939b29854286ad88940ee10f2eac48bfec9dba678"},
+    {file = "Pillow-8.2.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:3da86987a323708512d4d35939b29854286ad88940ee10f2eac48bfec9dba678"},
 ]
 python-dotenv = [
     {file = "python_dotenv-0.17.1-py2.py3-none-any.whl", hash = "sha256:00aa34e92d992e9f8383730816359647f358f4a3be1ba45e5a5cefd27ee91544"},
 ]
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},
+]
+"rpi.gpio" = [
+    {file = "RPi.GPIO-0.7.0-cp34-cp34m-linux_armv6l.whl", hash = "sha256:5cd2f3c88d0b1e2f4780c905702c0474768c2bc113fb793121c2e117b401ab16"},
+    {file = "RPi.GPIO-0.7.0-cp34-cp34m-linux_armv7l.whl", hash = "sha256:5cd2f3c88d0b1e2f4780c905702c0474768c2bc113fb793121c2e117b401ab16"},
+    {file = "RPi.GPIO-0.7.0-cp35-cp35m-linux_armv6l.whl", hash = "sha256:7da5235aeba20da39ad4fb97f3ba3a2c6b2d60bba8958b00a4df42f608c6d42e"},
+    {file = "RPi.GPIO-0.7.0-cp35-cp35m-linux_armv7l.whl", hash = "sha256:7da5235aeba20da39ad4fb97f3ba3a2c6b2d60bba8958b00a4df42f608c6d42e"},
+    {file = "RPi.GPIO-0.7.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:6a4791f41cafc2ee6e4cb70e5bd31fadc66a0cfab29b38df8723a98f6f73ad5a"},
+    {file = "RPi.GPIO-0.7.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:6a4791f41cafc2ee6e4cb70e5bd31fadc66a0cfab29b38df8723a98f6f73ad5a"},
+]
+smbus2 = [
+    {file = "smbus2-0.4.1-py2.py3-none-any.whl", hash = "sha256:8b1e70cda011b6fb3caf8377a1084f73a5aa99392b78529f140b0a3f06468f6c"},
+]
+spidev = [
+    {file = "spidev-3.5-cp34-cp34m-linux_armv6l.whl", hash = "sha256:73a92248f6873d23e213961db087a3023ee939836ae4a247f7bbf07526f7a904"},
+    {file = "spidev-3.5-cp34-cp34m-linux_armv7l.whl", hash = "sha256:73a92248f6873d23e213961db087a3023ee939836ae4a247f7bbf07526f7a904"},
+    {file = "spidev-3.5-cp35-cp35m-linux_armv6l.whl", hash = "sha256:c810a1e2262bd949ffc9a4dbd831a54783d364705ecd6d3cc8b5b0b911db59e6"},
+    {file = "spidev-3.5-cp35-cp35m-linux_armv7l.whl", hash = "sha256:c810a1e2262bd949ffc9a4dbd831a54783d364705ecd6d3cc8b5b0b911db59e6"},
+    {file = "spidev-3.5-cp37-cp37m-linux_armv6l.whl", hash = "sha256:20261448f6427beb63df6a13914acf7aeeabb25b2c01d4d90d2f1f14c8e70268"},
+    {file = "spidev-3.5-cp37-cp37m-linux_armv7l.whl", hash = "sha256:20261448f6427beb63df6a13914acf7aeeabb25b2c01d4d90d2f1f14c8e70268"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.4-py2.py3-none-any.whl", hash = "sha256:2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df"},
