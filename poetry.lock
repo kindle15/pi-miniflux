@@ -38,30 +38,6 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
-name = "inky"
-version = "1.1.1"
-description = "Inky pHAT Driver"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-numpy = "*"
-smbus2 = "*"
-spidev = "*"
-
-[package.extras]
-example-depends = ["beautifulsoup4", "geocoder", "requests"]
-fonts = ["font-fredoka-one", "font-hanken-grotesk", "font-intuitive", "font-source-serif-pro"]
-rpi = ["rpi.gpio"]
-rpi-gpio-output = ["rpi.gpio"]
-
-[package.source]
-type = "legacy"
-url = "https://www.piwheels.org/simple"
-reference = "piwheels"
-
-[[package]]
 name = "miniflux"
 version = "0.0.13"
 description = "Client library for Miniflux API"
@@ -71,32 +47,6 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 requests = "*"
-
-[package.source]
-type = "legacy"
-url = "https://www.piwheels.org/simple"
-reference = "piwheels"
-
-[[package]]
-name = "numpy"
-version = "1.19.4"
-description = "NumPy is the fundamental package for array computing with Python."
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.source]
-type = "legacy"
-url = "https://www.piwheels.org/simple"
-reference = "piwheels"
-
-[[package]]
-name = "pillow"
-version = "8.0.1"
-description = "Python Imaging Library (Fork)"
-category = "main"
-optional = false
-python-versions = ">=3.6"
 
 [package.source]
 type = "legacy"
@@ -143,61 +93,17 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
-name = "rpi.gpio"
-version = "0.7.0"
-description = "A module to control Raspberry Pi GPIO channels"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://www.piwheels.org/simple"
-reference = "piwheels"
-
-[[package]]
-name = "smbus2"
-version = "0.4.0"
-description = "smbus2 is a drop-in replacement for smbus-cffi/smbus-python in pure Python"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.extras]
-docs = ["sphinx (>=1.5.3)"]
-qa = ["flake8"]
-test = ["nose", "mock"]
-
-[package.source]
-type = "legacy"
-url = "https://www.piwheels.org/simple"
-reference = "piwheels"
-
-[[package]]
-name = "spidev"
-version = "3.5"
-description = "Python bindings for Linux SPI access through spidev"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://www.piwheels.org/simple"
-reference = "piwheels"
-
-[[package]]
 name = "urllib3"
-version = "1.26.2"
+version = "1.26.4"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 
 [package.extras]
-brotli = ["brotlipy (>=0.6.0)"]
 secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+brotli = ["brotlipy (>=0.6.0)"]
 
 [package.source]
 type = "legacy"
@@ -207,7 +113,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "90f472480d112d65ca9f2a1342744998ecbfd90d4f142ef71d451321c2e9173f"
+content-hash = "2b684093d47d3079efa9ab71f3aca46aa716da60ba0e4232fd98adc9b2fb103f"
 
 [metadata.files]
 certifi = [
@@ -219,19 +125,8 @@ chardet = [
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:4a57a6379512ade94fa99e2fa46d3cd0f2f553040548d0e2958c6ed90ee48226"},
 ]
-inky = [
-    {file = "inky-1.1.1-py3-none-any.whl", hash = "sha256:911a31bc87f658a8a5f6928deff1894234946d9ef8c423602300b855dacf0783"},
-]
 miniflux = [
     {file = "miniflux-0.0.13-py2.py3-none-any.whl", hash = "sha256:283529347d7a84551eea43862a99107f291f1b251bf3bda00e65e926df90317d"},
-]
-numpy = [
-    {file = "numpy-1.19.4-cp37-cp37m-linux_armv6l.whl", hash = "sha256:5ddd1dfa2be066595c1993165b4cae84b9866b12339d0c903db7f21a094324a3"},
-    {file = "numpy-1.19.4-cp37-cp37m-linux_armv7l.whl", hash = "sha256:5ddd1dfa2be066595c1993165b4cae84b9866b12339d0c903db7f21a094324a3"},
-]
-pillow = [
-    {file = "Pillow-8.0.1-cp37-cp37m-linux_armv6l.whl", hash = "sha256:5a3342d34289715928c914ee7f389351eb37fa4857caa9297fc7948f2ed3e53d"},
-    {file = "Pillow-8.0.1-cp37-cp37m-linux_armv7l.whl", hash = "sha256:5a3342d34289715928c914ee7f389351eb37fa4857caa9297fc7948f2ed3e53d"},
 ]
 python-dotenv = [
     {file = "python_dotenv-0.17.1-py2.py3-none-any.whl", hash = "sha256:00aa34e92d992e9f8383730816359647f358f4a3be1ba45e5a5cefd27ee91544"},
@@ -239,25 +134,6 @@ python-dotenv = [
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},
 ]
-"rpi.gpio" = [
-    {file = "RPi.GPIO-0.7.0-cp34-cp34m-linux_armv6l.whl", hash = "sha256:5cd2f3c88d0b1e2f4780c905702c0474768c2bc113fb793121c2e117b401ab16"},
-    {file = "RPi.GPIO-0.7.0-cp34-cp34m-linux_armv7l.whl", hash = "sha256:5cd2f3c88d0b1e2f4780c905702c0474768c2bc113fb793121c2e117b401ab16"},
-    {file = "RPi.GPIO-0.7.0-cp35-cp35m-linux_armv6l.whl", hash = "sha256:7da5235aeba20da39ad4fb97f3ba3a2c6b2d60bba8958b00a4df42f608c6d42e"},
-    {file = "RPi.GPIO-0.7.0-cp35-cp35m-linux_armv7l.whl", hash = "sha256:7da5235aeba20da39ad4fb97f3ba3a2c6b2d60bba8958b00a4df42f608c6d42e"},
-    {file = "RPi.GPIO-0.7.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:6a4791f41cafc2ee6e4cb70e5bd31fadc66a0cfab29b38df8723a98f6f73ad5a"},
-    {file = "RPi.GPIO-0.7.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:6a4791f41cafc2ee6e4cb70e5bd31fadc66a0cfab29b38df8723a98f6f73ad5a"},
-]
-smbus2 = [
-    {file = "smbus2-0.4.0-py2.py3-none-any.whl", hash = "sha256:39a8d5f84b3b07ced0dd411f8c3d62c6aed93a2f06b270309dd41e82973e2f55"},
-]
-spidev = [
-    {file = "spidev-3.5-cp34-cp34m-linux_armv6l.whl", hash = "sha256:73a92248f6873d23e213961db087a3023ee939836ae4a247f7bbf07526f7a904"},
-    {file = "spidev-3.5-cp34-cp34m-linux_armv7l.whl", hash = "sha256:73a92248f6873d23e213961db087a3023ee939836ae4a247f7bbf07526f7a904"},
-    {file = "spidev-3.5-cp35-cp35m-linux_armv6l.whl", hash = "sha256:c810a1e2262bd949ffc9a4dbd831a54783d364705ecd6d3cc8b5b0b911db59e6"},
-    {file = "spidev-3.5-cp35-cp35m-linux_armv7l.whl", hash = "sha256:c810a1e2262bd949ffc9a4dbd831a54783d364705ecd6d3cc8b5b0b911db59e6"},
-    {file = "spidev-3.5-cp37-cp37m-linux_armv6l.whl", hash = "sha256:20261448f6427beb63df6a13914acf7aeeabb25b2c01d4d90d2f1f14c8e70268"},
-    {file = "spidev-3.5-cp37-cp37m-linux_armv7l.whl", hash = "sha256:20261448f6427beb63df6a13914acf7aeeabb25b2c01d4d90d2f1f14c8e70268"},
-]
 urllib3 = [
-    {file = "urllib3-1.26.2-py2.py3-none-any.whl", hash = "sha256:d8ff90d979214d7b4f8ce956e80f4028fc6860e4431f731ea4a8c08f23f99473"},
+    {file = "urllib3-1.26.4-py2.py3-none-any.whl", hash = "sha256:2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df"},
 ]
