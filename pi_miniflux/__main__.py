@@ -60,10 +60,11 @@ def draw_text(draw, headline):
 
 
 def draw_favicon(img, encoded_favicon):
+    print(encoded_favicon)
     favicon = Image.open(BytesIO(base64.b64decode(encoded_favicon)))
-    large_fav = favicon.resize((ICON_GUTTER_WIDTH, ICON_GUTTER_WIDTH), Image.HAMMING)
+    large_fav = favicon.resize((ICON_GUTTER_WIDTH, ICON_GUTTER_WIDTH), Image.LANCZOS)
     CENTERED_IMG = (inky_display.HEIGHT / 2) - (ICON_GUTTER_WIDTH / 2)
-    img.paste(large_fav, (int(SPACING / 2), int(CENTERED_IMG)))
+    img.paste(large_fav, (int(SPACING / 2), int(CENTERED_IMG)), large_fav)
 
 
 def draw_headline(headline, encoded_favicon):
@@ -80,7 +81,7 @@ def main():
     recent_story = feeds.get('entries')[0]
     icon_data = recent_story.get('feed').get('icon')
     icon = client.get_feed_icon(feed_id=icon_data.get('feed_id'))
-    draw_headline(recent_story.get('title'), icon.get('data'))
+    draw_headline(recent_story.get('title'), icon.get('data').split(',')[1])
     now = datetime.now()
     current_time = now.strftime("%m/%d/%Y, %H:%M:%S")
     print("Updated story!", current_time)
