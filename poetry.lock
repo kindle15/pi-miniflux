@@ -105,8 +105,8 @@ reference = "piwheels"
 
 [[package]]
 name = "python-dotenv"
-version = "0.15.0"
-description = "Add .env support to your django/flask apps in development and deployments"
+version = "0.17.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
 category = "main"
 optional = false
 python-versions = "*"
@@ -207,7 +207,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "ed8821d2bcf18772fb01906b5afb4b48bc125189b3eebdcbbe5537c9ece0b2fa"
+content-hash = "90f472480d112d65ca9f2a1342744998ecbfd90d4f142ef71d451321c2e9173f"
 
 [metadata.files]
 certifi = [
@@ -234,7 +234,7 @@ pillow = [
     {file = "Pillow-8.0.1-cp37-cp37m-linux_armv7l.whl", hash = "sha256:5a3342d34289715928c914ee7f389351eb37fa4857caa9297fc7948f2ed3e53d"},
 ]
 python-dotenv = [
-    {file = "python_dotenv-0.15.0-py2.py3-none-any.whl", hash = "sha256:0c8d1b80d1a1e91717ea7d526178e3882732420b03f08afea0406db6402e220e"},
+    {file = "python_dotenv-0.17.1-py2.py3-none-any.whl", hash = "sha256:00aa34e92d992e9f8383730816359647f358f4a3be1ba45e5a5cefd27ee91544"},
 ]
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},
