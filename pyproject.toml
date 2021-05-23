@@ -1,15 +1,15 @@
 [tool.poetry]
-name = "pi-blur"
+name = "pi-miniflux"
 version = "0.1.0"
 description = ""
-authors = ["Chris Barry <chris@greatjones.co>"]
+authors = ["Chris Barry <me@chrisb.xyz>"]
 
 [[tool.poetry.source]]
 name = "piwheels"
 url = "https://www.piwheels.org/simple/"
 
 [tool.poetry.scripts]
-start = "pi_blur.__main__:main"
+start = "pi_miniflux.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -18,6 +18,7 @@ python-dotenv = "^0.15.0"
 pillow = "^8.0.1"
 inky = "^1.1.1"
 "rpi.gpio" = "^0.7.0"
+miniflux = "^0.0.13"
 
 [tool.poetry.dev-dependencies]
 

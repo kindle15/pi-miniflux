@@ -1,2 +1,2 @@
-# piblur
-A little app for raspberry pi to talk to Newsblur
+# pi-miniflux
+A little app for raspberry pi to talk to miniflux

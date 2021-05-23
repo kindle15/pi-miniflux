@@ -6,14 +6,13 @@ import os
 from datetime import datetime
 from io import BytesIO
 import base64
+import miniflux
 
 load_dotenv()
 
-API_PREFIX = 'https://www.newsblur.com/'
-
 USER_NAME = os.getenv('USERNAME')
-PASSWORD = os.getenv('PASSWORD')
-FEED_ID = os.getenv('FEED_ID')
+API_KEY = os.getenv('API_KEY')
+CATEGORY_ID = os.getenv('CATEGORY_ID')
 
 ICON_GUTTER_WIDTH = 40
 SPACING = 4

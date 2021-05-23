@@ -62,6 +62,22 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
+name = "miniflux"
+version = "0.0.13"
+description = "Client library for Miniflux API"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+requests = "*"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
 name = "numpy"
 version = "1.19.4"
 description = "NumPy is the fundamental package for array computing with Python."
@@ -191,7 +207,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "9a861464dbde2c51311a5d1a1c816a395f1ef3f19f9232459298ecad5b633f8e"
+content-hash = "ed8821d2bcf18772fb01906b5afb4b48bc125189b3eebdcbbe5537c9ece0b2fa"
 
 [metadata.files]
 certifi = [
@@ -205,6 +221,9 @@ idna = [
 ]
 inky = [
     {file = "inky-1.1.1-py3-none-any.whl", hash = "sha256:911a31bc87f658a8a5f6928deff1894234946d9ef8c423602300b855dacf0783"},
+]
+miniflux = [
+    {file = "miniflux-0.0.13-py2.py3-none-any.whl", hash = "sha256:283529347d7a84551eea43862a99107f291f1b251bf3bda00e65e926df90317d"},
 ]
 numpy = [
     {file = "numpy-1.19.4-cp37-cp37m-linux_armv6l.whl", hash = "sha256:5ddd1dfa2be066595c1993165b4cae84b9866b12339d0c903db7f21a094324a3"},
