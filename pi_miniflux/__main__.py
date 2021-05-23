@@ -80,7 +80,7 @@ def main():
     recent_story = feeds.get('entries')[0]
     icon_data = recent_story.get('feed').get('icon')
     icon = client.get_feed_icon(feed_id=icon_data.get('feed_id'))
-    draw_headline(recent_story.get('title'), icon.get('data'))
+    draw_headline(recent_story.get('title'), icon.get('data').split(',')[1])
     now = datetime.now()
     current_time = now.strftime("%m/%d/%Y, %H:%M:%S")
     print("Updated story!", current_time)
