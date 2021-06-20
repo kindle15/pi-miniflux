@@ -105,7 +105,7 @@ reference = "piwheels"
 
 [[package]]
 name = "python-dotenv"
-version = "0.17.1"
+version = "0.18.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
 category = "main"
 optional = false
@@ -207,7 +207,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "72ed2eef1c62df18c1b7137dd8e5f5c46b0e87fbda6b27935bb58196e60e192e"
+content-hash = "adf5b385b2a17b77962a0cead2f90ce2a2ca1cb0eddc473911542a4416703296"
 
 [metadata.files]
 certifi = [
@@ -234,7 +234,7 @@ pillow = [
     {file = "Pillow-8.2.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:3da86987a323708512d4d35939b29854286ad88940ee10f2eac48bfec9dba678"},
 ]
 python-dotenv = [
-    {file = "python_dotenv-0.17.1-py2.py3-none-any.whl", hash = "sha256:00aa34e92d992e9f8383730816359647f358f4a3be1ba45e5a5cefd27ee91544"},
+    {file = "python_dotenv-0.18.0-py2.py3-none-any.whl", hash = "sha256:dd8fe852847f4fbfadabf6183ddd4c824a9651f02d51714fa075c95561959c7d"},
 ]
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},
