@@ -105,11 +105,11 @@ reference = "piwheels"
 
 [[package]]
 name = "python-dotenv"
-version = "0.18.0"
+version = "0.19.1"
 description = "Read key-value pairs from a .env file and set them as environment variables"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.5"
 
 [package.extras]
 cli = ["click (>=5.0)"]
@@ -207,7 +207,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "adf5b385b2a17b77962a0cead2f90ce2a2ca1cb0eddc473911542a4416703296"
+content-hash = "dee3856ab58e1e3c5d60bc7ed8831029000fd5e9a9e1826f8ca143a4d01a581b"
 
 [metadata.files]
 certifi = [
@@ -228,13 +228,17 @@ miniflux = [
 numpy = [
     {file = "numpy-1.20.3-cp37-cp37m-linux_armv6l.whl", hash = "sha256:d840d80623c96696fab0d15489f49425bec1c0f47f3bf0b3362ce0c75dbad993"},
     {file = "numpy-1.20.3-cp37-cp37m-linux_armv7l.whl", hash = "sha256:d840d80623c96696fab0d15489f49425bec1c0f47f3bf0b3362ce0c75dbad993"},
+    {file = "numpy-1.20.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:4c020adbaa398721cd5e30c5aab52b505efcd35c3b0156e800245c1274c96962"},
+    {file = "numpy-1.20.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:4c020adbaa398721cd5e30c5aab52b505efcd35c3b0156e800245c1274c96962"},
 ]
 pillow = [
     {file = "Pillow-8.2.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:3da86987a323708512d4d35939b29854286ad88940ee10f2eac48bfec9dba678"},
     {file = "Pillow-8.2.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:3da86987a323708512d4d35939b29854286ad88940ee10f2eac48bfec9dba678"},
+    {file = "Pillow-8.2.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:2153527f3a5f07789c5a4509bc6136420d16b3a4ea1c317b39a995577a9e5586"},
+    {file = "Pillow-8.2.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:2153527f3a5f07789c5a4509bc6136420d16b3a4ea1c317b39a995577a9e5586"},
 ]
 python-dotenv = [
-    {file = "python_dotenv-0.18.0-py2.py3-none-any.whl", hash = "sha256:dd8fe852847f4fbfadabf6183ddd4c824a9651f02d51714fa075c95561959c7d"},
+    {file = "python_dotenv-0.19.1-py2.py3-none-any.whl", hash = "sha256:23804899374c02ec4999bedfe692a15617048b79ba4c077d8c8a0f47c08814e8"},
 ]
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},
@@ -257,6 +261,8 @@ spidev = [
     {file = "spidev-3.5-cp35-cp35m-linux_armv7l.whl", hash = "sha256:c810a1e2262bd949ffc9a4dbd831a54783d364705ecd6d3cc8b5b0b911db59e6"},
     {file = "spidev-3.5-cp37-cp37m-linux_armv6l.whl", hash = "sha256:20261448f6427beb63df6a13914acf7aeeabb25b2c01d4d90d2f1f14c8e70268"},
     {file = "spidev-3.5-cp37-cp37m-linux_armv7l.whl", hash = "sha256:20261448f6427beb63df6a13914acf7aeeabb25b2c01d4d90d2f1f14c8e70268"},
+    {file = "spidev-3.5-cp39-cp39-linux_armv6l.whl", hash = "sha256:fac5de521322fa884a58e517cdba46e964accedcb4d2f2df8d09d21303471737"},
+    {file = "spidev-3.5-cp39-cp39-linux_armv7l.whl", hash = "sha256:fac5de521322fa884a58e517cdba46e964accedcb4d2f2df8d09d21303471737"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.4-py2.py3-none-any.whl", hash = "sha256:2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df"},

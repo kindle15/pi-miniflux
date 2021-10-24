@@ -14,7 +14,7 @@ start = "pi_miniflux.__main__:main"
 [tool.poetry.dependencies]
 python = "^3.7"
 requests = "^2.25.1"
-python-dotenv = "^0.18.0"
+python-dotenv = "^0.19.0"
 miniflux = "^0.0.13"
 pillow = "^8.2.0"
 inky = "^1.2.0"
